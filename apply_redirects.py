@@ -1812,11 +1812,7 @@ def _transform_to_version_dir(path, version):
         return path
 
     prefix = '/versions/x.x.x/'
-    return '/'.join((
-        'versions',
-        version,
-        path[len(prefix):]
-    ))
+    return path[len(prefix):]
 
 def main():
     unknown_paths = set()
